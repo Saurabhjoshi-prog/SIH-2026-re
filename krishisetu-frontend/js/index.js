@@ -4,6 +4,40 @@
 
 
 /* =========================================================
+   KEEP AUTHENTICATED USERS IN THEIR APP
+   =========================================================
+
+   Internal app pages use index.html for the Home link. When a
+   logged-in user follows that link, return them to the correct
+   role dashboard instead of showing the public landing page.
+   ========================================================= */
+
+const loggedIn =
+    sessionStorage.getItem("krishisetuLoggedIn") === "true";
+
+const userRole =
+    sessionStorage.getItem("krishisetuUserRole");
+
+const hasToken =
+    Boolean(localStorage.getItem("token"));
+
+
+if (
+    loggedIn &&
+    hasToken &&
+    (userRole === "farmer" || userRole === "buyer")
+) {
+
+    window.location.replace(
+        userRole === "farmer"
+            ? "dashboard.html"
+            : "buyer-dashboard.html"
+    );
+
+}
+
+
+/* =========================================================
    MOBILE NAVIGATION
    ========================================================= */
 

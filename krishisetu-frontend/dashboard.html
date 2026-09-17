@@ -8,6 +8,7 @@
     <title>KrishiSetu | Farmer Dashboard</title>
 
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile-menu.css">
 </head>
 
 <body>
@@ -33,10 +34,6 @@
         <!-- DESKTOP + MOBILE NAV -->
 
         <nav class="main-nav" id="mainNav">
-
-            <a href="index.html">
-                Home
-            </a>
 
             <a href="dashboard.html" class="active">
                 Dashboard
@@ -85,13 +82,19 @@
                 ♧
             </a>
 
-            <a
-                href="profile.html"
-                class="profile-button"
-                aria-label="Profile"
-            >
-                F
-            </a>
+            <div class="profile-menu">
+                <a
+                    href="profile.html"
+                    class="profile-button"
+                    aria-label="Profile"
+                >
+                    F
+                </a>
+                <div class="profile-dropdown">
+                    <a href="profile.html">Profile</a>
+                    <button type="button" data-action="logout">Logout</button>
+                </div>
+            </div>
 
         </div>
 
@@ -600,6 +603,7 @@
 
 
 <script src="js/dashboard.js"></script>
+<script src="js/profile-menu.js"></script>
 
 </body>
 </html>

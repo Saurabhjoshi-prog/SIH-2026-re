@@ -8,6 +8,7 @@
     <title>KrishiSetu | Buyer Dashboard</title>
 
     <link rel="stylesheet" href="css/buyer-dashboard.css">
+    <link rel="stylesheet" href="css/profile-menu.css">
 </head>
 
 <body>
@@ -42,10 +43,6 @@
         <!-- NAVIGATION -->
 
         <nav class="main-nav" id="mainNav">
-
-            <a href="index.html">
-                Home
-            </a>
 
             <a href="buyer-dashboard.html" class="active">
                 Dashboard
@@ -96,13 +93,19 @@
                 ♧
             </a>
 
-            <a
-                href="profile.html"
-                class="profile-button"
-                aria-label="Profile"
-            >
-                B
-            </a>
+            <div class="profile-menu">
+                <a
+                    href="profile.html"
+                    class="profile-button"
+                    aria-label="Profile"
+                >
+                    B
+                </a>
+                <div class="profile-dropdown">
+                    <a href="profile.html">Profile</a>
+                    <button type="button" data-action="logout">Logout</button>
+                </div>
+            </div>
 
         </div>
 
@@ -793,6 +796,7 @@
 
 
 <script src="js/buyer-dashboard.js"></script>
+<script src="js/profile-menu.js"></script>
 
 </body>
 </html>
